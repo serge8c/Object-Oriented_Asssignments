@@ -1,0 +1,31 @@
+/**
+Name: Sergio Molina
+Due Date: 3/25/16
+ITI 202-204 Object Oriented Programming
+Individual Assignment 6
+Description:  Wrote a program called Reverse that reverses the array of a main method
+/*
+
+public class Reverse {
+	public static int[] reverseTheArray(int[] initialArray){ 		
+		for (int i = 0; i < (initialArray.length/2); i++){
+			int temp = initialArray[i];
+			initialArray[i] = initialArray[(initialArray.length - i) - 1];
+			initialArray[(initialArray.length - i) - 1] = temp;
+		} //end of loop
+		return initialArray;
+	}
+	
+	public static void main (String[] args){
+		int[] initialArray ={1, 4, 9, 16, 3, 12, 26};
+		for (int i = 0; i < initialArray.length; i++){
+			System.out.print(initialArray[i] + " ");
+		}
+		System.out.println();
+		initialArray = reverseTheArray(initialArray);
+		for (int i = 0; i < initialArray.length; i++){
+			System.out.print(initialArray[i] + " ");
+		}
+	}
+
+}
