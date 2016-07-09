@@ -1,0 +1,33 @@
+/**
+Name: Sergio Molina
+Due Date: 4/7/16
+ITI 202-204 Object Oriented Programming
+Individual Assignment 6
+Description:  Used a throws exception to reverse the doubles in a file and print it in the console.
+/*
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+public class Double_Reversed {
+
+	public static void main(String[] args) throws FileNotFoundException{
+		// TODO Auto-generated method stub
+		File file = new File("double.txt");
+		Scanner in = new Scanner(file);
+		ArrayList<Double> dos = new ArrayList<Double>();
+		double que;
+		
+		while (in.hasNextDouble()){
+			que = in.nextDouble();
+			dos.add(que);
+		}
+		for (int i = dos.size() - 1; i >= 0; i--){
+			System.out.println(dos.get(i));
+		}
+	}
+
+}
