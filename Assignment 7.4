@@ -1,0 +1,26 @@
+Description:  Wrote a program that finds the average of an ArrayList.
+/*
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Loopy2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		int sum = 0;
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		System.out.println("Enter numbers, quit by entering Q: ");
+		while (in.hasNextInt()){
+			int temp = in.nextInt();
+			numbers.add(temp); 
+			
+			sum += temp; 
+		}
+		in.close();
+		System.out.println(sum/numbers.size());
+		
+	}
+
+}
