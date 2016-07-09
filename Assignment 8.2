@@ -1,0 +1,53 @@
+/**
+Name: Sergio Molina
+Due Date: 4/7/16
+ITI 202-204 Object Oriented Programming
+Individual Assignment 6
+Description:  Used a try-catch block to reverse the lines in a file and save into another file. 
+/*
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
+import java.util.Scanner;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File file = new File("input.txt");
+		//declare a new File object
+		File file2 = new File("output.txt");
+		try {
+			ArrayList<String> mary = new ArrayList<String>();
+			String line;
+			PrintWriter out = new PrintWriter(file2, "UTF-8");
+			Scanner in = new Scanner(file);
+			//declare new scanner object
+			Scanner output  = new Scanner(file2);
+			
+			
+			while (in.hasNextLine()){
+			//used to iterate all the lines in file
+				
+				line = in.nextLine();
+				mary.add(line);
+			}
+			System.out.println(mary);
+			for (int i = mary.size() - 1; i >= 0 ; i--){
+				out.println(mary.get(i));
+			}
+			out.close();
+			in.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
