@@ -1,0 +1,28 @@
+/**
+Name: Sergio Molina
+Due Date: 3/25/16
+ITI 202-204 Object Oriented Programming
+Individual Assignment 6
+Description:  Wrote a program that uses a loop to collect numbers of integers and store them in a ArrayList.
+/*
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Loopy2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		System.out.println("Enter numbers1, quit by entering Q: ");
+		while (in.hasNextInt()){
+			numbers.add(in.nextInt());
+		}
+		System.out.print(numbers);
+		in.close();
+
+	}
+
+}
