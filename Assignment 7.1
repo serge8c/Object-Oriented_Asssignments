@@ -1,0 +1,28 @@
+/**
+Name: Sergio Molina
+Due Date: 3/25/16
+ITI 202-204 Object Oriented Programming
+Individual Assignment 6
+Description:  Wrote a loop that reads ten numbers and stores them in an array then a second loop that displays the ten numbers in the opposite order.
+/*
+
+import java.util.Scanner;
+public class Loopy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+
+		int[] nums = new int[10];
+		for (int i = 0; i < nums.length; i++){
+			System.out.println("Enter number: ");
+			nums[i] = in.nextInt();
+		} //end first loop
+		for (int i = 9; i >= 0; i--){
+			System.out.print(nums[i] + " ");
+		}
+		in.close();
+	}
+
+
+}
