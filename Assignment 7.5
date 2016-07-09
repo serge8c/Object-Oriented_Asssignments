@@ -1,0 +1,35 @@
+Description:  Wrote a program that removed the highest and lowest values in an ArrayList
+/*
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Loop2_Modified {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		System.out.println("Enter numbers, quit by entering Q: ");
+		int highesti = 0;
+		int lowesti = 0;
+		int count = 0;
+		while (in.hasNextInt()){
+			int temp = in.nextInt();
+			numbers.add(temp);
+			if (temp > numbers.get(highesti)){
+				highesti = count;
+			}
+			if (temp < numbers.get(lowesti)){
+				lowesti = count;
+			}
+			count++;
+		}
+		numbers.remove(highesti);
+		numbers.remove(lowesti);
+		System.out.print(numbers);
+		in.close();
+
+	}
+
+}
